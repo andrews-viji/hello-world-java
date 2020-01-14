@@ -22,6 +22,6 @@ else
     run
 fi
 # remove <none>:<none> image in docker images
-if [ "$(docker images -f "dangling=true" -q" ];then
+if [ "$(docker images -f "dangling=true" -q)" ];then
     docker rmi $(docker images -f "dangling=true" -q)
 fi
